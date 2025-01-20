@@ -31,3 +31,9 @@ def primes_n(n):
 
 def digit_sum(n):
     return sum([int(x) for x in str(n)])
+
+def factorial_to_n(n):
+    l = [1, 1]
+    for i in range(2, n+1):
+        l.append(l[i-1] * i)
+    return l
