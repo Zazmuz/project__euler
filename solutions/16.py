@@ -1,1 +1,2 @@
-print(sum([int(x) for x in str(2**1000)]))
+from helpers import digit_sum
+print(digit_sum(2**1000))

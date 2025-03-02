@@ -28,3 +28,6 @@ def primes_n(n):
         p += 1
 
     return [i for i in range(n+1) if is_prime[i]]
+
+def digit_sum(n):
+    return sum([int(x) for x in str(n)])
