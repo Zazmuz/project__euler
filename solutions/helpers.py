@@ -1,7 +1,20 @@
 def mult(arr):
     from functools import reduce
     mult = lambda x, y: x*y
-    return reduce(mult, arr)
+    return reduce(mult, arr, 1)
+
+def prime_factors(n):
+    from collections import Counter
+    factor=2
+    used = []
+    while factor <= n:
+        while n % factor == 0:
+            used.append(factor)
+            n //= factor
+        factor += 1
+    if n != 1:
+        used.append(n)
+    return Counter(used)
 
 def primes_n(n):
     is_prime = [True] * (n+1)

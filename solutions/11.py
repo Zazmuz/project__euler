@@ -31,8 +31,6 @@ for y, row in enumerate(grid):
         diagright_big = mult([grid[y+i][x+i] for i in range(dst) if is_inside(x+i, y+i)])
         diagleft_big = mult([grid[y+i][x-i] for i in range(dst) if is_inside(x+i, y+i)])
         down_big = mult([grid[y+i][x] for i in range(dst) if is_inside(x, y+i)])
-         
-        #print(row_big, diag_big, down_big)
         largest = max(largest, row_big, diagright_big, diagleft_big, down_big)
 
 print(largest)
